@@ -44,13 +44,14 @@ else
 fi
 
 #Password Validation
-#Rule 2
+#Rule 3
 
 read -p "Enter a password : " Password
-passwordpattern="^[A-Z]{1}[a-zA-Z0-9]{7,}"
+passwordpattern="^[a-zA-Z0-9]{8,}"
 if [[ $Password =~ $passwordpattern ]]
 then
-	echo "Password is Valid"
+        echo "Password is Valid"
 else
-	echo "Password is Invalid"
+        echo "Password is Invalid"
 fi
+
