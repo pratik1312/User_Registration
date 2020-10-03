@@ -44,14 +44,20 @@ else
 fi
 
 #Password Validation
-#Rule 3
+#Rule 4
 
-read -p "Enter a password : " Password
-passwordpattern="^[a-zA-Z0-9]{8,}"
-if [[ $Password =~ $passwordpattern ]]
+read -p "Enter a password with minimum lenght as 8 : " Password
+#passwordpattern="^[a-zA-Z0-9]{7,}[!@#$%^&*-_.]{1}[a-zA-Z0-9]{1,}$"
+count=${#Password}
+echo "Password length is : " $count
+passwordpattern="^[a-zA-Z0-9]{1,}[!@#$%^&*._-]{1}[a-zA-Z0-9]{1,}"
+if [[ $count -ge 8 ]]
 then
-        echo "Password is Valid"
-else
-        echo "Password is Invalid"
+        if [[ $Password =~ $passwordpattern ]]
+        then
+                echo "Password is Valid"
+        else
+                echo "Password is Invalid"
+        fi
 fi
 
