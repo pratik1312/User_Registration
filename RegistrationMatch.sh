@@ -47,7 +47,7 @@ fi
 #Rule 1
 
 read -p "Enter a password : " Password
-passwordpattern="^[a-zA-Z0-9]{8,}"
+passwordpattern="^[A-Z]{1}[a-zA-Z0-9]{7,}"
 if [[ $Password =~ $passwordpattern ]]
 then
 	echo "Password is Valid"
