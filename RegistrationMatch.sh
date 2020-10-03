@@ -44,7 +44,7 @@ else
 fi
 
 #Password Validation
-#Rule 1
+#Rule 2
 
 read -p "Enter a password : " Password
 passwordpattern="^[A-Z]{1}[a-zA-Z0-9]{7,}"
