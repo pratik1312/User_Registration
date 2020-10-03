@@ -20,3 +20,12 @@ else
         echo "Last Name is Invalid"
 fi
 
+#Email Validation
+read -p "Enter Email Address : " Email
+emailpattern="^[a-zA-z0-9]+([.+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,}([.][a-zA-Z]{2,}){0,1}$"
+if [[ $Email =~ $emailpattern ]]
+then
+	echo "Email address is Valid"
+else
+	echo "Email address is Invalid"
+fi
