@@ -42,3 +42,15 @@ then
 else
 	echo "Mobile number is Invalid"
 fi
+
+#Password Validation
+#Rule 1
+
+read -p "Enter a password : " Password
+passwordpattern="^[a-zA-Z0-9]{8,}"
+if [[ $Password =~ $passwordpattern ]]
+then
+	echo "Password is Valid"
+else
+	echo "Password is Invalid"
+fi
